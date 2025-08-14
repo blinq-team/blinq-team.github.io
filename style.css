@@ -606,12 +606,24 @@ textarea {
   .feature-images .feature-img {
     width: 90px;
   }
+  
+  /* 네비게이션 모바일 최적화 */
+  .navbar {
+    padding: 0.8rem 0;
+  }
+  .nav-container {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+  }
   .nav-links {
-    gap: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .nav-links a {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   
   /* 모바일에서 호버 효과 제거 */
@@ -638,5 +650,43 @@ textarea {
   
   .feature-item.scroll-animate::before {
     transform: scaleX(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.6rem 0;
+  }
+  .nav-container {
+    padding: 0 0.8rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .logo-img {
+    height: 28px;
+  }
+  .nav-links {
+    gap: 0.3rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-links a {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.8rem;
+    flex: 1;
+    text-align: center;
+  }
+  .hero {
+    padding: 3rem 0 2rem 0;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero .subhead {
+    font-size: 1rem;
+  }
+  .main-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 } 

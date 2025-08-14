@@ -36,6 +36,9 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -295,13 +298,11 @@ body {
   transition: transform 0.3s ease;
 }
 
-.feature-item:hover::before,
-.feature-item.scroll-animate::before {
+.feature-item:hover::before {
   transform: scaleX(1);
 }
 
-.feature-item:hover,
-.feature-item.scroll-animate {
+.feature-item:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-heavy);
   border-color: rgba(10, 252, 196, 0.3);
@@ -338,8 +339,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.feature-item:hover .feature-img,
-.feature-item.scroll-animate .feature-img {
+.feature-item:hover .feature-img {
   transform: scale(1.05);
 }
 
@@ -588,21 +588,42 @@ textarea {
 @media (max-width: 700px) {
   .feature-list {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .container {
     width: 100%;
     padding: 0 1rem;
   }
   .hero {
-    padding: 4rem 0 3rem 0;
+    padding: 3rem 0 2rem 0;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .hero .subhead {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  .main-btn {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.05rem;
   }
   .logo-img {
     height: 32px;
   }
   .feature-item {
     max-width: 100%;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .feature-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  .feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   .feature-images {
     gap: 0.5rem;
@@ -610,55 +631,78 @@ textarea {
   }
   .image-slider {
     width: 100%;
-    max-width: 220px;
+    max-width: 280px;
     height: 400px;
   }
+  .feature-img {
+    max-width: 280px;
+  }
   .feature-images .feature-img {
-    width: 90px;
+    width: 100px;
+  }
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .contact {
+    padding: 3rem 0;
+  }
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .contact-form {
+    gap: 1.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
   
-  /* 네비게이션 모바일 최적화 */
+  /* 네비게이션 모바일 최적화 - 세로 배치 */
   .navbar {
-    padding: 0.8rem 0;
+    padding: 1rem 0;
   }
   .nav-container {
     padding: 0 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 0.8rem;
+  }
+  .logo-img {
+    height: 45px;
   }
   .nav-links {
-    gap: 0.3rem;
-    flex-wrap: wrap;
+    gap: 0.8rem;
     justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
   }
   .nav-links a {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     white-space: nowrap;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
   }
   
-  /* 모바일에서 호버 효과 제거 */
+  /* 모바일에서도 호버 효과 유지 */
   .feature-item:hover,
   .feature-item:hover .feature-img {
-    transform: none;
-    box-shadow: var(--shadow-light);
-  }
-  
-  .feature-item:hover::before {
-    transform: scaleX(0);
-  }
-  
-  /* 스크롤 애니메이션 효과만 유지 */
-  .feature-item.scroll-animate {
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-heavy);
   }
   
-  .feature-item.scroll-animate .feature-img {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-heavy);
-  }
-  
-  .feature-item.scroll-animate::before {
+  .feature-item:hover::before {
     transform: scaleX(1);
   }
 }
@@ -669,38 +713,101 @@ textarea {
     padding: 0 0.8rem;
   }
   .navbar {
-    padding: 0.6rem 0;
+    padding: 0.8rem 0;
   }
   .nav-container {
     padding: 0 0.8rem;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 0.6rem;
   }
   .logo-img {
-    height: 28px;
+    height: 40px;
   }
   .nav-links {
-    gap: 0.2rem;
+    gap: 0.6rem;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .nav-links a {
-    padding: 0.2rem 0.3rem;
-    font-size: 0.75rem;
-    flex: 1;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
     text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.4rem;
+    backdrop-filter: blur(10px);
   }
   .hero {
-    padding: 3rem 0 2rem 0;
+    padding: 2.5rem 0 1.5rem 0;
   }
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
   }
   .hero .subhead {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
   .main-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  .features {
+    padding: 2.5rem 0;
+  }
+  .features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .feature-item {
+    padding: 1.2rem 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .feature-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .image-slider {
+    max-width: 250px;
+    height: 350px;
+  }
+  .feature-img {
+    max-width: 250px;
+  }
+  .feature-images .feature-img {
+    width: 90px;
+  }
+  .contact {
+    padding: 2.5rem 0;
+  }
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-form {
+    gap: 1.2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  .footer {
+    padding: 2rem 0 1.5rem 0;
+  }
+  .footer p {
+    font-size: 0.9rem;
   }
 } 

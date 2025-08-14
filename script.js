@@ -8,36 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("YOUR_USER_ID"); // EmailJS 사용자 ID를 여기에 입력하세요
   })();
 
-  // 스크롤 애니메이션 감지
-  function handleScrollAnimations() {
-    const featureItems = document.querySelectorAll('.feature-item');
-    const featuresSection = document.querySelector('.features');
-    
-    if (!featuresSection) return;
-    
-    const sectionTop = featuresSection.offsetTop;
-    const sectionHeight = featuresSection.offsetHeight;
-    const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY;
-    
-    // features 섹션이 화면에 보이는지 확인
-    const isSectionVisible = scrollY + windowHeight > sectionTop && 
-                            scrollY < sectionTop + sectionHeight;
-    
-    featureItems.forEach((item, index) => {
-      if (isSectionVisible) {
-        // 각 카드에 약간의 지연을 두고 애니메이션 적용
-        setTimeout(() => {
-          item.classList.add('scroll-animate');
-        }, index * 200); // 200ms 간격으로 순차 적용
-      } else {
-        item.classList.remove('scroll-animate');
-      }
-    });
-  }
 
-  // 스크롤 이벤트 리스너
-  window.addEventListener('scroll', handleScrollAnimations);
 
   // 부드러운 스크롤
   navLinks.forEach(link => {

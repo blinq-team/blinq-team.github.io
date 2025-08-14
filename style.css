@@ -441,10 +441,13 @@ body {
 
 /* ===== CONTACT SECTION ===== */
 .contact {
+  background: #F0FDFA;
   background: var(--gradient-card);
   padding: 5rem 0 4rem 0;
   text-align: center;
   position: relative;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .contact::before {
@@ -456,6 +459,7 @@ body {
   bottom: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%230afcc4" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .contact h2 {
@@ -774,6 +778,11 @@ textarea {
   
   .contact {
     padding: 2.5rem 0;
+    background: #F0FDFA !important;
+  }
+  
+  .contact::before {
+    display: none;
   }
   
   .contact h2 {

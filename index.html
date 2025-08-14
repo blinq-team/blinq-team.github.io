@@ -3,60 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blinq</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Blinq - 일정과 가계부를 하나로 연결하는 멀티 캘린더 앱 | 예산관리, 일정관리</title>
+  <meta name="description" content="Blinq는 일정과 가계부를 하나로 연결하는 혁신적인 멀티 캘린더 앱입니다. 예산관리, 일정관리, 가계부, 캘린더를 한 번에! 가족과 일정 공유, 지출 분석까지.">
+  <meta name="keywords" content="가계부, 캘린더, 일정관리, 예산관리, 멀티캘린더, 가족일정, 지출관리, 금융관리, 스케줄러, 예산설정, 지출분석, 일정공유, 가계부앱, 캘린더앱">
+  <meta name="author" content="Blinq Team">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="54Y8TaRa9r8SCE9ko8sm2Ee_m2TCJELqJ1q46Zmfn8M">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Blinq - 일정과 가계부를 하나로 연결하는 멀티 캘린더 앱">
+  <meta property="og:description" content="일정과 가계부를 하나로 연결하는 혁신적인 멀티 캘린더 앱. 예산관리, 일정관리, 가족과 일정 공유까지!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blinq-team.github.io">
+  <meta property="og:image" content="https://blinq-team.github.io/img/blinq-full-logo_1.png">
+  <meta property="og:site_name" content="Blinq">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blinq - 일정과 가계부를 하나로 연결하는 멀티 캘린더 앱">
+  <meta name="twitter:description" content="일정과 가계부를 하나로 연결하는 혁신적인 멀티 캘린더 앱. 예산관리, 일정관리, 가족과 일정 공유까지!">
+  <meta name="twitter:image" content="https://blinq-team.github.io/img/blinq-full-logo_1.png">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#3fc3e4">
+  <meta name="application-name" content="Blinq">
+  <meta name="apple-mobile-web-app-title" content="Blinq">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://blinq-team.github.io">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/blinq-full-logo_1.png">
+  <link rel="apple-touch-icon" href="img/blinq-full-logo_1.png">
+  
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Blinq",
+    "description": "일정과 가계부를 하나로 연결하는 멀티 캘린더 앱",
+    "url": "https://blinq-team.github.io",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "KRW"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "150"
+    },
+    "keywords": ["가계부", "캘린더", "일정관리", "예산관리", "멀티캘린더", "가족일정", "지출관리"],
+    "featureList": [
+      "일정과 가계부 연동",
+      "가족과 일정 공유",
+      "예산 설정 및 지출 분석",
+      "멀티 캘린더 관리"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Blinq로 일정관리와 가계부를 동시에 할 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네. 캘린더에서 일정 확인과 지출 기록을 같은 화면에서 처리하며 일정과 지출이 서로 연동됩니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "예산관리(용돈관리) 기능이 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "월간·주간 예산을 설정하고 사용량을 추적합니다. 지출 패턴을 분석해 절약 팁도 제공합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "일정 일부만 공유할 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "특정 일정만 선택해 가족·연인 등 한 사람과 공유할 수 있습니다."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary">
     <div class="container nav-container">
-      <div class="logo">Blinq</div>
+      <a href="#about" class="logo" aria-label="Blinq 홈으로">
+        <img src="img/blinq-full-logo_1.png" alt="Blinq - 일정과 가계부를 하나로 연결하는 멀티 캘린더 앱" class="logo-img">
+      </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#qa">Q&A</a></li>
+        <li><a href="#qa">Q&amp;A</a></li>
         <li><a href="#download">Download</a></li>
       </ul>
     </div>
   </nav>
   <header class="hero" id="about">
-    <div class="container">
-      <h1>일정과 가계부를 하나로 연결!</h1>
-      <a href="https://apps.apple.com/jp/app/%EB%B8%94%EB%A7%81%ED%81%AC-%EC%BA%98%EB%A6%B0%EB%8D%94%EC%99%80-%EA%B0%80%EA%B3%84%EB%B6%80%EB%A5%BC-%ED%95%98%EB%82%98%EB%A1%9C/id6746705580" class="btn main-btn">Get the App</a>
+    <div class="container hero-inner">
+      <h1>일정과 가계부를 하나로 연결하는 멀티 캘린더 앱</h1>
+      <p class="subhead">캘린더에서 약속을 확인하고, 같은 화면에서 지출까지 기록하는 올인원 일정관리 및 예산관리 앱.</p>
+      <a href="https://apps.apple.com/jp/app/%EB%B8%94%EB%A7%81%ED%81%AC-%EC%BA%98%EB%A6%B0%EB%8D%94%EC%99%80-%EA%B0%80%EA%B3%84%EB%B6%80%EB%A5%BC-%ED%95%98%EB%82%98%EB%A1%9C/id6746705580" class="btn main-btn" aria-label="App Store에서 Blinq 다운로드">App Store에서 받기</a>
     </div>
   </header>
   <section class="features" id="features">
     <div class="container">
-      <h2>Blinq Multi Calendar</h2>
+      <h2>핵심 기능</h2>
       <div class="feature-list">
         <div class="feature-item">
-          <h3>캘린더와 가계부의 심플한 전환</h3>
-          <p>홈버튼 터치만으로 바로 전환!</p>
+          <div class="image-slider">
+            <img src="img/home_1.png" alt="Blinq 캘린더와 가계부 전환 화면" class="feature-img active">
+            <img src="img/home_2.png" alt="Blinq 일정 관리 화면" class="feature-img">
+            <img src="img/home_3.png" alt="Blinq 가계부 관리 화면" class="feature-img">
+          </div>
+          <h3>캘린더 ↔ 가계부 <br>하나의 앱으로 동시에 관리!</h3>
+          <p>일정 확인과 지출 기록을 오가며 흐름이 끊기지 않는 통합 일정관리 및 예산관리 시스템.</p>
         </div>
         <div class="feature-item">
-          <h3>원하는 상대방과 일정 공유</h3>
-          <p>가족, 연인과 같이 가장 가까운 한 사람과 일정을 공유할 수 있어요.</p>
+          <img src="img/sche-money.png" alt="일정과 연동하는 가계부 기능" class="feature-img">
+          <h3>일정과 연동해서 등록하는 가계부</h3>
+          <p>일정과 지출을 연결하여 더욱 체계적으로 관리할 수 있는 스마트 가계부 시스템.</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/share.png" alt="가족과 일정 공유 기능" class="feature-img">
+          <h3>가까운 사람과 일정 공유</h3>
+          <p>가족, 연인 등 원하는 한 사람과 필요한 일정만 선택 공유할 수 있는 멀티 캘린더 기능.</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/budget.png" alt="예산 관리 및 지출 분석 기능" class="feature-img">
+          <h3>강력한 예산 설정과 똑똑한 지출 분석</h3>
+          <p>예산을 설정하고 지출 패턴을 분석하여 더욱 스마트한 금융 관리를 도와드리는 예산관리 도구.</p>
         </div>
       </div>
     </div>
   </section>
   <section class="contact" id="qa">
     <div class="container">
-      <h2>블링크에 문의하기</h2>
-      <form id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Name" required>
-        <input type="email" id="email" name="email" placeholder="Email Address" required>
-        <textarea id="message" name="message" placeholder="문의내용" required></textarea>
-        <button type="submit" class="btn">문의하기</button>
-        <div id="formMessage"></div>
+      <h2>문의하기</h2>
+      <form id="contactForm" novalidate>
+        <input type="text" id="name" name="name" placeholder="이름" required>
+        <input type="email" id="email" name="email" placeholder="이메일 주소" required>
+        <textarea id="message" name="message" placeholder="내용을 입력해 주세요" required></textarea>
+        <button type="submit" class="btn">보내기</button>
+        <div id="formMessage" role="status" aria-live="polite"></div>
       </form>
     </div>
   </section>
   <footer class="footer" id="download">
-    <div class="container">
-      <a href="https://apps.apple.com/jp/app/%EB%B8%94%EB%A7%81%ED%81%AC-%EC%BA%98%EB%A6%B0%EB%8D%94%EC%99%80-%EA%B0%80%EA%B3%84%EB%B6%80%EB%A5%BC-%ED%95%98%EB%82%98%EB%A1%9C/id6746705580" class="btn">Download Now</a>
-      <p>Copyright by Blinq</p>
+    <div class="container footer-inner">
+      <a href="https://apps.apple.com/jp/app/%EB%B8%94%EB%A7%81%ED%81%AC-%EC%BA%98%EB%A6%B0%EB%8D%94%EC%99%80-%EA%B0%80%EA%B3%84%EB%B6%80%EB%A5%BC-%ED%95%98%EB%82%98%EB%A1%9C/id6746705580" class="btn" aria-label="Blinq 다운로드">Download Now</a>
+      <p class="copyright">© Blinq - 캘린더와 가계부를 하나로</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
-</html> 
+</html>

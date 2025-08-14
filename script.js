@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("YOUR_USER_ID"); // EmailJS 사용자 ID를 여기에 입력하세요
   })();
 
+  // 네비게이션 스크롤 효과
+  function handleNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  }
+
+  // 스크롤 이벤트 리스너
+  window.addEventListener('scroll', handleNavbarScroll);
+
 
 
   // 부드러운 스크롤

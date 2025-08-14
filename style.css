@@ -286,16 +286,69 @@ body {
   transition: transform 0.3s ease;
 }
 
-.feature-item:hover::before {
+.feature-item:hover::before,
+.feature-item.scroll-animate::before {
   transform: scaleX(1);
 }
 
-.feature-item:hover {
+.feature-item:hover,
+.feature-item.scroll-animate {
   transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-heavy);
   border-color: rgba(10, 252, 196, 0.3);
 }
 
+.feature-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  height: auto;
+  align-items: center;
+}
+
+.feature-images .feature-img {
+  width: 120px;
+  height: auto;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.feature-item:hover .feature-images .feature-img {
+  transform: scale(1.05);
+}
+
+.feature-img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-img,
+.feature-item.scroll-animate .feature-img {
+  transform: scale(1.05);
+}
+
+.feature-item h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.feature-item p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Image Slider for first card */
 .image-slider {
   position: relative;
   width: 100%;
@@ -351,55 +404,6 @@ body {
 
 .feature-item:hover .image-slider .feature-img {
   transform: none;
-}
-
-.feature-images {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  height: auto;
-  align-items: center;
-}
-
-.feature-images .feature-img {
-  width: 120px;
-  height: auto;
-  border-radius: 0.8rem;
-  transition: all 0.3s ease;
-  margin: 0;
-}
-
-.feature-item:hover .feature-images .feature-img {
-  transform: scale(1.05);
-}
-
-.feature-img {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  margin: 0 auto 1.5rem;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover .feature-img {
-  transform: scale(1.05);
-}
-
-.feature-item h3 {
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.feature-item p {
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 0.95rem;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -608,5 +612,31 @@ textarea {
   .nav-links a {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+  }
+  
+  /* 모바일에서 호버 효과 제거 */
+  .feature-item:hover,
+  .feature-item:hover .feature-img {
+    transform: none;
+    box-shadow: var(--shadow-light);
+  }
+  
+  .feature-item:hover::before {
+    transform: scaleX(0);
+  }
+  
+  /* 스크롤 애니메이션 효과만 유지 */
+  .feature-item.scroll-animate {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-heavy);
+  }
+  
+  .feature-item.scroll-animate .feature-img {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-heavy);
+  }
+  
+  .feature-item.scroll-animate::before {
+    transform: scaleX(1);
   }
 } 
